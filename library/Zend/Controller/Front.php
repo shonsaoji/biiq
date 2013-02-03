@@ -951,6 +951,7 @@ class Zend_Controller_Front
                  * Dispatch request
                  */
                 try {
+                	
                     $dispatcher->dispatch($this->_request, $this->_response);
                 } catch (Exception $e) {
                     if ($this->throwExceptions()) {

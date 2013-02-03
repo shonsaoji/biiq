@@ -1,0 +1,6 @@
+[general]
+db.adapter = PDO_MYSQL
+db.config.host = db453890854.db.1and1.com
+db.config.username = dbo453890854
+db.config.password = testing
+db.config.dbname = db453890854

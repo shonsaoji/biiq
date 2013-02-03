@@ -16,19 +16,30 @@ Zend_Loader::loadClass('Zend_Json');
 Zend_Loader::loadClass('Zend_Db_Adapter_Pdo_Mysql');
 
 // setup database
+/*
 $db = new Zend_Db_Adapter_Pdo_Mysql(array(
     'host'     => '127.0.0.1',
     'username' => 'sethkutt_sethkut',
     'password' => 'pjIc1kSE',
     'dbname'   => 'sethkutt_testing'
 ));
+*/
+
+$db = new Zend_Db_Adapter_Pdo_Mysql(array(
+		'host'     => 'db453890854.db.1and1.com',
+		'username' => 'dbo453890854',
+		'password' => 'testing',
+		'dbname'   => 'db453890854'
+));
+
 Zend_Db_Table::setDefaultAdapter($db);
 
 // setup controller
 $frontController = Zend_Controller_Front::getInstance();
 $frontController->throwExceptions(true);
-$frontController->setBaseUrl('/biiq');
+#$frontController->setBaseUrl('/biiq');
 $frontController->setControllerDirectory('./application/controllers');
 
 // run!
+
 $frontController->dispatch();
