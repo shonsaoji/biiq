@@ -1,11 +1,11 @@
-    var iCountQuestion = 0;//всего вопросов
-    var iCountQuestionInPage = 0;//вопросов на этой странице
-    var iCountTotalPage = 0;//всего страниц
+    var iCountQuestion = 0;
+    var iCountQuestionInPage = 0;
+    var iCountTotalPage = 0;
     var iCountAnsweredTotal = 0;
-    var iCountAnsweredMainQuestionThisPage = 0;   //на сколько главных вопросов ответил посетитель на этой странице
-    var iCountAnsweredQuestionThisPage = 0;   //на сколько вопросов ответил посетитель на этой странице
-    var iCountQuestionThisPage = 0;   //на сколько вопросов должен ответить посетитель на этой странице
-    var iCurentPage = 1;    //текущая страница
+    var iCountAnsweredMainQuestionThisPage = 0;
+    var iCountAnsweredQuestionThisPage = 0; 
+    var iCountQuestionThisPage = 0;   
+    var iCurentPage = 1;
     var iQuestionIdNotAnswered = 0;
     var strBaseUrl = "";
 

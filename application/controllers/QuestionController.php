@@ -34,6 +34,7 @@ class QuestionController extends Zend_Controller_Action
     public function questionsAction()
     {
         $request = $this->_getParam('request');
+        $request = stripslashes($request);
         $requestObject = Zend_Json::decode($request, Zend_Json::TYPE_OBJECT);
         $action = $requestObject->action;
         $answerClass = new Answers();
