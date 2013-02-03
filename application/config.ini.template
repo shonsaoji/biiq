@@ -1,0 +1,6 @@
+[general]
+db.adapter = PDO_MYSQL
+db.config.host = localhost
+db.config.username = root
+db.config.password = test
+db.config.dbname = testing

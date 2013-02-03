@@ -1,0 +1,174 @@
+<!--<?php echo $this->render('common/header.phtml'); ?>-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title><?php echo $this->escape($this->title); ?></title>
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo $this->baseUrl?>/public/styles/global.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo $this->baseUrl?>/public/styles/style.css" />
+    <script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/uncompressed.jquery.dd.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/jquery.json-2.2.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/json.js"></script>        
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/highcharts.js"></script>
+<!--[if IE]>
+    <script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/excanvas.compiled.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+function submitForm(){
+						document.forms["biiqscore"].submit();
+						}
+
+var chart1; // globally available
+$(document).ready(function() {
+      chart1 = new Highcharts.Chart({
+         chart: {
+            renderTo: 'chart-container-1',
+            defaultSeriesType: 'bar',
+            margin: [50, 20, 60, 120] //margins from top, right , bottom, left(determines length of industry text to show) 
+         },
+         title: {
+				text: 'BIIQ Industry Average Score'
+		 },
+		 subtitle: {
+				text: ''
+		 },
+         xAxis: {
+            categories: <?php echo $this->group; ?>,
+            title: {
+                font:'bolt 12px Tahoma',
+                enabled: true,
+				text: '',
+				align: 'middle',
+                margin: 1
+			},
+            labels: {
+                align: "right",
+                enabled: true,
+                rotation: 0,
+                font:'bolt 12px Tahoma',
+                x: -10,
+                y: 5,
+                style: {
+            	color: '#666',
+            	font: '11px bold "Lucida Grande", "Lucida Sans Unicode",'+
+            		' Verdana, Arial, Helvetica, sans-serif' }
+                },
+			offset:0
+         },
+         yAxis: {
+				min: 0,
+                max:  <?php echo $this->max_group; ?>,
+                lineWidth: 1,        
+                labels: {
+                    align: "right",
+                    enabled: true,
+                    rotation: 0,
+                    font:'bolt 12px Tahoma',
+                    x: 6,
+                    y: 15
+                },
+				title: {
+                    font:'bolt 12px Tahoma',
+                    enabled: true,
+					text: 'BIIQ Score',
+					align: 'middle'
+				}
+         },
+         credits: {
+				enabled: false
+         },
+         tooltip: {
+				formatter: function() {
+					return '<b>'+ this.x +'</b><br/>'+
+						 this.series.name +': '+ this.y +'';
+				}
+				
+		 },
+		 plotOptions: {
+				bar: {
+					dataLabels: {
+						enabled: true,
+						color: 'auto'
+							
+						}
+					 }
+  		 },				
+		 series: [{
+  			name: 'BIIQ Score',
+			data: <?php echo $this->groupvalue; ?>
+			}]
+
+      });
+   });
+
+
+</script>
+</head>
+<?php echo $this->render('common/top.phtml'); ?>
+<tr>
+    <td>
+		<table width="1000" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="left" valign="top" width="400">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="score">
+                        <tr>
+                            <td>
+                                Your BIIQ score:
+                            </td>
+                        </tr>
+						<tr>
+							<td>
+                                <div class="scorePerson">
+				                    <div class='cell'>
+					                    <div  id="scorePerson" class='scoreText'>
+                                            <?php echo $this->escape($this->score); ?>
+                                        </div>
+                                    </div>
+                                </div>
+							</td>
+						</tr>
+						<tr><td style="font-size: 60%; color:blue;"><P></P>
+						
+						<form name="biiqscore" action="http://www.tychio.com/howtoimprove.phtml" method="post" autocomplete="off">
+						<input type='hidden' name='biiq_num' value='<?php echo $this->escape($this->score); ?>' />
+						<input type='hidden' name='xsession_id' value='<?php echo ($this->escape($this->personId))*712; ?>' />  
+						<a name="biiq_score" href="javascript:void(1);" onClick="submitForm();">What does this mean?</a>
+						</form>
+						
+						
+						</a>
+						</td></tr>
+					</table>
+				</td>
+                <td width="500" align="right">                    
+                    <!-- <div id="chart-container-1" style="width: 500px; height: 450px; margin-left: 50px;"></div>-->
+					<div id="chart-container-1" style="width: 100%; height: 400px"></div> 
+                </td>
+			</tr>
+		</table>
+    </td>
+</tr>
+<tr>
+    <td>
+        <table class="myFont">
+             <tr>
+                  <td>
+                  &nbsp;
+                  </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</td>
+</tr>
+                                           
+<?php echo $this->render('common/bottom.phtml'); ?>
+<?php echo $this->render('common/footer.phtml'); ?>

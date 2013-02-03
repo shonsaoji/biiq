@@ -1,0 +1,287 @@
+.progressBar
+{
+    display: table;
+    height: 30px;
+	width: 250px;
+    position:relative;
+    background:#e2f2fe;
+}
+.error
+{
+    border: solid 1px black;
+    width: 100%;
+    height: 1000px;
+    font-size: 150%;
+}
+.pageQuestion
+{
+    
+}
+
+.DependentQuestions
+{
+    font:normal 12px Tahoma;
+    color: #0F71BC;
+    background:#e2f2fe;
+	font-size: 150%;
+    margin-left:10%;
+    margin-top:-20px;
+	text-align: left;
+    position:relative;
+}
+.radioAnswer
+{
+    margin-left:40px;
+}
+.textAnswer
+{
+   width: 250px;
+}
+.TextMainQuestion
+{
+    margin-top:10px;
+    padding-top:10px;
+}
+.TextChildQuestion
+{
+    margin-left:10px;
+}
+.PrevButton
+{
+    margin-left:0%;
+    width:141px;
+    height:41px;
+    cursor: pointer;
+    background: url('../images/PrevPageBtn.png') no-repeat;
+}
+.showmybiiq
+{
+    margin-left:0%;
+	margin-right:62px;
+	width:250px;
+    height:41px;
+    cursor: pointer;
+    background: url('../images/ShowMyBiiqBtn.png') no-repeat;
+}
+.NextButton
+{
+    margin-left:0%;
+    width:141px;
+    height:41px;
+    cursor: pointer;
+    background: url('../images/NextPageBtn.png') no-repeat;
+}
+
+.registration
+{
+    padding-top: 20px;
+    margin-top:10%;
+    margin-left:20%;
+    width: 50%;
+	text-align: left;
+    position:relative;
+}
+
+.score
+{
+    padding-top: 20px;
+    margin-left:20%;
+    width: 50%;
+	text-align: center;
+    position:relative;
+    font:normal 12px Tahoma;
+    color: black;   
+	font-size: 250%;
+}
+.myFont
+{
+    font:normal 12px Tahoma;
+    color: #0F71BC;   
+	font-size: 150%;
+}
+.scorePerson
+{
+    display: table;
+    height: 278px;
+	width: 400px;
+    background: url('../images/BigScoreBox2.png') no-repeat;
+}
+.scoreText
+{
+    font:normal 16px Tahoma;
+    font-family: Times, serif;
+    font-size: 600%;
+    color: white;
+}
+.textBoxRegistration
+{
+    background-color: #7DBAF1;
+}
+.RadioClass{
+	display: none;
+}
+.RadioLabelClass:hover{
+	text-decoration: underline;
+}
+
+.RadioLabelClass
+{
+    cursor: pointer;
+	height: 36px;
+	width: 85px;
+	display: block;
+}
+.RadioLabelYes
+{
+	background: url('../images/form_question_04.png') no-repeat;
+}
+.RadioLabelNo
+{
+	background: url('../images/form_question_05.png') no-repeat;
+}
+.RadioSelectedYes{
+	background: url('../images/yes_click.png') no-repeat;
+}
+.RadioSelectedNo{
+	background: url('../images/no_click.png') no-repeat;
+}
+	.question
+	{
+		display: table;
+		height: 125px;
+		width: 429px;
+		background: url('../images/form_question_01.png') no-repeat;
+	}
+
+	.cell, .celli
+	{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.celli
+	{
+
+	}
+	.text, .celli div
+	{
+        font:normal 12px Tahoma;
+	    font-size: 150%;
+        color: #0F71BC;
+		text-align: left;
+        padding-left:20px;
+        padding-right:10px;
+	}
+ .TakeTestNowBtn
+ {
+     width:331px;
+     height:55px;
+     cursor: pointer;
+     background: url('../images/TakeTheTestNowBtn2.png') no-repeat; 
+ }
+.buttomRight
+{
+     margin-top:7px;
+     margin-right:7px;
+     margin-bottom:20px;
+     width:142px;
+     height:41px;
+     cursor: pointer;
+     background: url('../images/NextPageBtn.png') no-repeat;    
+}
+.litle_logo
+{
+    width:312px;
+    height:111px;
+    background: url('../images/litle_logo.png') no-repeat;
+}
+.stepbystep
+{
+    width:462px;
+    height:89px;
+    background: url('../images/stepbystep.gif') no-repeat;
+}
+.whichindustry
+{
+    width:392px;
+    height:59px;
+   background: url('../images/whichindustry.gif') no-repeat;
+}
+.stepbystepQuestion
+{
+    width:462px;
+    height:89px;
+    font:normal 12px Arial;
+    color: #0F71BC;
+	font-size: 200%;
+    text-align:center;
+}
+.progressBar10
+{
+    background: url('../images/MyProgressBar10.png') no-repeat;
+   
+}
+
+.progressBar20
+{
+    background: url('../images/MyProgressBar20.png') no-repeat;
+}
+.progressBar25
+{
+    background: url('../images/MyProgressBar25.png') no-repeat;
+}
+.progressBar30
+{
+    background: url('../images/MyProgressBar30.png') no-repeat;
+}
+.progressBar40
+{
+    background: url('../images/MyProgressBar40.png') no-repeat;
+}
+.progressBar50
+{
+    background: url('../images/MyProgressBar50.png') no-repeat;
+}
+.progressBar60
+{
+    background: url('../images/MyProgressBar60.png') no-repeat;
+}
+.progressBar70
+{
+    background: url('../images/MyProgressBar70.png') no-repeat;
+}
+.progressBar75
+{
+    background: url('../images/MyProgressBar75.png') no-repeat;
+}
+.progressBar80
+{
+    background: url('../images/MyProgressBar80.png') no-repeat;
+}
+.progressBar90
+{
+    background: url('../images/MyProgressBar90.png') no-repeat;
+}
+.progressBar100
+{
+    background: url('../images/MyProgressBar100.png') no-repeat;    
+}
+.websites3css
+{
+    border:1px solid #acd5fb;
+    width:250px;
+    height:31px;
+    padding:7px 0 0 6px;
+    background:#fff;
+    color:#50677d;
+    font-size:14px;
+}
+
+.interestOnProgressBar, .celli div
+{
+    font:normal 12px Tahoma;
+    font-size: 150%;
+    color: #0F71BC;
+    text-align: center;
+    padding-left:20px;
+    padding-right:10px;
+}

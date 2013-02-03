@@ -1,0 +1,187 @@
+<?php echo $this->render('common/header.phtml'); ?>
+<script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/test.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/dropdownmenu.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl?>/public/styles/dd.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl?>/public/styles/global.css" />
+<script type="text/javascript">
+    var bSelectedGroupWithPic = 0;
+    var bEnable = 0;
+
+    function findIndex()
+    {
+        var val = TrimStr($("#textfield3").attr("value"));
+        var select_index = 0;
+        if(val.length == 2)
+        {
+            var select = document.getElementById("websites3");
+            for(var i = 0; i<select.length; i++)
+            {
+                var s = select.options[i].value;
+                if(s.lastIndexOf("|"+val+"|") >= 0)
+                    select_index = i;
+            }
+        }
+        return select_index;
+    }
+
+    function checkSIC()
+    {
+        var index = findIndex();
+        if(index != 0)
+            document.getElementById("websites3").options[index].selected = true;
+        else
+            clearComboBox();
+    }
+    function clearSIC()
+    {
+        var index = findIndex();
+        if(index == 0)
+            $("#textfield3").attr("value","Enter first two digits of NAICS / SIC code");
+    }
+    function TrimStr(s)
+    {
+        s = s.replace( /^\s+/g, '');
+        return s.replace( /\s+$/g, '');
+    }
+    function clearComboBox()
+    {
+        document.getElementById("websites3").options[0].selected = true;
+    }
+    function clearTextBox()
+    {
+        $("#textfield3").attr("value","");
+    }
+    function click_next()
+    {
+        if(bSelectedGroupWithPic == 1)
+            redirect();
+        else
+        {
+            var sic =  TrimStr($("#textfield3").attr("value"));
+            if(!document.getElementById("websites3").options[0].selected && sic.length != 2)
+            {
+                var index = document.getElementById("websites3").selectedIndex;
+                var strId = document.getElementById("websites3").options[index].value;
+                var firstChar = strId.indexOf("|") + 1;
+                var lastChar = firstChar + 2;
+                sic = strId.substring(firstChar,lastChar);
+            }
+            if(sic.length == 2)
+            {
+                var requestObject = new Object();
+                requestObject.sic = sic;
+                var jsonRequest = JSON.stringify(requestObject);
+                var url = './group/savesic';
+                $.ajax({
+                   type: "get",
+                   url: url,
+                   dataType : "json",
+                   data: "request="+jsonRequest,
+                   error:redirect() 
+                });                
+            }
+            else
+            {
+                alert("You should choose the industry in which your company.");
+            }
+        }
+    }
+    function redirect()
+    {
+         location.href = "<?php echo $this->baseUrl?>/question";
+    }
+    function enableOtherIndustry()
+    {
+        if(bEnable == 0)
+        {
+            $("#other_industry").css("display","block");
+        }
+        bEnable = 1;
+    }
+    function click_group(Id)
+    {
+        if(Id == 0)
+        {
+            enableOtherIndustry();
+        }
+        else
+        {
+            bSelectedGroupWithPic = 1;
+            var requestObject = new Object();
+            requestObject.group_id = Id;
+
+            var jsonRequest = JSON.stringify(requestObject);
+            var url = './group/savegroup';
+            $.ajax({
+               type: "get",
+               url: url,
+               dataType : "json",
+               data: "request="+jsonRequest,
+                error:redirect()
+            });
+        }
+    }
+    function showValue(arg, arg2)
+    {
+        //alert("calling show me: arg1 " + arg + " arg2 " +  arg2);     
+        var s = (arg2==undefined) ? '' : "<br /><font color='darkgreen'>value:</font> "+ arg2;
+        $("#selectedvalue").html("<font color='darkgreen'>label:</font> " + arg +  s);
+    }
+
+</script>
+</head>
+<?php echo $this->render('common/top.phtml'); ?>
+<tr>
+	<td>
+		<table width="1000" border="0" cellspacing="0" cellpadding="0" style="margin-top:40px;">
+			<tr>
+				<td align="left" valign="middle">
+					<div class="tabcontainer" style="z-index:-1">
+                        <ul id="tabmenu">
+                            <?php echo $this->listGroup; ?>                             
+                        </ul>
+					</div>
+				</td>
+			</tr>
+            <tr><td><table id="other_industry" style="display: none;">
+			<tr>
+				<td align="left" valign="middle"><img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" width="1" height="31"></td>
+			</tr>
+			<tr>
+				<td align="center" valign="middle"><img src="<?php echo $this->baseUrl?>/public/images/OR.gif" width="979" height="24"></td>
+			</tr>
+			<tr>
+				<td align="left" valign="middle"><img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" width="1" height="31"></td>
+			</tr>
+			<tr>
+				<td align="center" valign="middle">
+					<table width="650" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td align="right" valign="top">
+                                <a id="anchor"></a>
+								<select name="websites3" id="websites3" class="websites3css" onkeydown="showValue($('#websites3 option:selected').text(), this.value);output('onkeydown', this)">
+									<?php echo $this->returnOption; ?>
+								</select>
+							</td>
+							<td width="51" align="left" valign="top"><img src="<?php echo $this->baseUrl?>/public/images/OR2.gif" width="51" height="31"></td>
+                            <td align="left" valign="top"><input name="textfield3" type="text" class="pl-inputxt" id="textfield3" value="Enter first two digits of NAICS/SIC Code" onFocus="clearTextBox();"  onBlur="clearSIC();" onkeyup="checkSIC();" onkeydown="checkSIC();" onkeypress="checkSIC();"></td>
+							<td>&nbsp;</td>
+							<td></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            </table></td></tr>
+			<tr>
+				<td align="left" valign="top"><img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" alt="" width="1" height="35"></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+    <td width="20%" align="right">
+	    <?php echo $this->buttomRight ?>
+	</td>
+</tr>
+<?php echo $this->render('common/bottom.phtml'); ?>
+<?php echo $this->render('common/footer.phtml'); ?>

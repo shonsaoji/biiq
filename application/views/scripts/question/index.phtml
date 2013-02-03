@@ -1,0 +1,63 @@
+<?php echo $this->render('common/header.phtml'); ?>
+<script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/testings.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/progressBar.js"></script>
+<script type="text/javascript">
+        function changeMyRadio(id)
+        {
+            var nameGr = $("#"+id).attr("name");
+            $("input[name='"+nameGr+"']").next().removeClass("RadioSelectedYes");
+            $("input[name='"+nameGr+"']").next().removeClass("RadioSelectedNo");
+            if($("#"+id).next().hasClass("RadioLabelYes"))
+            {
+                $("#"+id).next("label").addClass("RadioSelectedYes");
+            }
+            else
+            if($("#"+id).next().hasClass("RadioLabelNo"))
+            {
+                $("#"+id).next("label").addClass("RadioSelectedNo");
+            }
+        }
+        SetBaseUrl("<?php echo $this->baseUrl?>");
+        InitPage();
+        viewPage(0);
+    </script>
+</head>
+<?php echo $this->render('common/top.phtml'); ?>
+<tr align="center"> 
+               <td valign="top">
+                    <div id="progressBar" class="progressBar"  style="margin-top:10px;">
+                        <div class='cell'>
+                            <div class="interestOnProgressBar">                                
+                            </div>
+                        </div>
+                    </div>
+                </td>
+</tr>
+<tr align="center">
+    <td>
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td valign="top">
+								<div id="pageQuestion" class="pageQuestion">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="padding-top:20px;padding-bottom:20px;" align='center'>
+									<input type="button" id="btnPrev" class="PrevButton" onclick="ViewPrevPage();"  />
+									<input type="button" id="btnNext" class="NextButton" onclick="ViewNextPage();"  />
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	 </td>
+</tr>
+<?php echo $this->render('common/bottom.phtml'); ?>
+<?php echo $this->render('common/footer.phtml'); ?>

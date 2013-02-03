@@ -1,0 +1,61 @@
+<?php echo $this->render('common/header.phtml'); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl?>/public/styles/balloontip.css" />
+<script type="text/javascript" src="<?php echo $this->baseUrl?>/public/scripts/balloontip.js"></script>
+
+</head>
+<?php echo $this->render('common/top.phtml'); ?>
+<tr>
+    <td>
+		<table width="1000" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="left" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td valign="top" align="center">
+								<img src="<?php echo $this->baseUrl?>/public/images/big_logo.png" width="678" height="240">
+							</td>
+						</tr>
+						<tr>
+							<td><img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" width="1" height="4"></td>
+						</tr>
+						<tr>
+							<td><img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" width="1" height="4"></td>
+						</tr>
+						<tr align="center">
+							<td><div onClick="location.href = '<?php echo $this->baseUrl?>/group';" class="TakeTestNowBtn"></div></td>
+						</tr>
+						<tr>
+							<td><img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" width="1" height="4"></td>
+						</tr>
+						<tr align="center">
+							<td><a href="#" rel="balloon1"><img src="<?php echo $this->baseUrl?>/public/images/WhatisBIIQ_2.png" ></a>
+							<img src="<?php echo $this->baseUrl?>/public/images/spacer.gif" width="3" height="30"></img>
+							<a href="#" rel="balloon2"><img src="<?php echo $this->baseUrl?>/public/images/who_should_take_this_test.png"</a>
+							</td>
+							<div id="balloon1" class="balloonstyle" style="width: 350px; background-color: lightyellow" align="left">
+<ul><li><b>BIIQ</b> stands for <B>B</B>usiness <b>I</b>ntelligence <B>I</B>ntelligence <B>Q</B>uotient. It measures the decision-making maturity of an organization using an established BI practice.</li>
+<li>- BIIQ considers the available business information and data according to the usage and needs of the organization. 
+<li>- BIIQ scores range from 1 to 10</li>
+<li>- A BIIQ score of 1 indicates that the organization is in its early stage of BI practice and implementation</li> 
+<li>- A BIIQ score of 10 indicates that the organization is at an advanced stage of BI practice and implementation</li>
+</ul>
+							</div>
+							<div id="balloon2" class="balloonstyle" style="width: 350px; background-color: lightyellow" align="left">
+							If you are a creator or user of reporting (Excel or other reporting tools), dashboards, scorecards in the company, or if you perform data analysis periodically, then this BIIQ test is for you.
+							</div>
+
+							</tr>
+							<tr align="center"><td>
+														<!-- AddThis Button BEGIN -->
+							<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4be212b97f0036e9"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4be212b97f0036e9"></script>
+							<!-- AddThis Button END -->
+							</td></tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+    </td>
+</tr>
+</table>
+
+<?php echo $this->render('common/footer.phtml'); ?>

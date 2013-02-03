@@ -1,0 +1,159 @@
+html, body, div, span, tbody, tfoot, thead, tr, th, td, em, font, img,  small, strong, sub, sup, h1, h2, h3, h4, h5, h6, p, a, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {	font-size: 100%; outline: 0; padding: 0; margin: 0;	border: 0;	}
+ol, ul 			{	list-style: none;	}
+
+/* ----------------- Body ------------------ */
+body  			{ width:100%; font:normal 12px Tahoma; color:#595959; background:#e2f2fe; margin:0 auto 	}
+h1 				{ font-size: 32px  } 
+h2 				{ font-size: 28px  }
+h3 				{ font-size: 25px  }
+h4 				{ font-size: 22px  }
+h5 				{ font-size: 18px  }
+h6 				{ font-size: 13px  }
+a:link, a:visited, a:active  		{ color:#333; text-decoration:none }
+a:hover 		{ text-decoration:underline }
+input, textarea, select{ font:normal 12px Arial; }
+
+/* ----------------- generic styles ------------------ */
+.clear 			{ clear:both;  	}
+.clearfix		{ clear:both; height:0; overflow:hidden; font-size:1px; width:98%; }
+.floatR			{ float:right	}
+.floatL			{ float:left	}
+a#greenlink:link, a#greenlink:visited, a#greenlink:active 	{ color:#357200 }
+.bold 			{ font-weight:bold	} 
+.wide193 { width:193px; }
+/* ---------------------------- [:->) structures (<-:] ---------------------------------------------- */
+	
+body.main	{ background-image:url(../images/headerbg-1x167.jpg); background-repeat: repeat-x;  }
+body.inner	{ background-image:url(../images/innerhdrbg.gif); background-repeat: repeat-x;  }
+#footer 	{ width:961px; margin:0 auto 20px auto; font:normal 11px Arial; color:#2b2b2b; background:url(../images/dottedline.gif) repeat-x }
+#footer a 	{ text-decoration:underline; margin-right:10px; }
+input.inputxt 		{ border:1px solid #acd5fb; height:18px; padding:4px 0 0 6px; background:#fff; color:#879eb3	}
+input.pl-inputxt 	{ border:1px solid #acd5fb; width:270px; height:22px; padding:7px 0 0 6px; background:#fff; color:#50677d; font-size:14px;	}
+
+ul#tabmenu li 			{ float:left; margin:9px 0 0 0; width:164px; height:141px; position:relative;    }
+ul#tabmenu li a 		{  position:relative; z-index: 1		 }
+ul#tabmenu li a.ih, 
+ul#tabmenu li a.fs, 
+ul#tabmenu li a.ls, 
+ul#tabmenu li a.ener, 	 
+ul#tabmenu li a.cs, 
+ul#tabmenu li a.np, 
+ul#tabmenu li a.auto,  
+ul#tabmenu li a.cm, 
+ul#tabmenu li a.compmfg,  
+ul#tabmenu li a.ht, 
+ul#tabmenu li a.ps, 
+ul#tabmenu li a.tt,
+ul#tabmenu li a.oi,{ float:left; width:164px; height:141px; text-indent:-9999em; display:block; position:relative	}
+
+ul#tabmenu li a.ih 		{ float:left; width:164px; height:141px; background:url(../images/insurancehealth.jpg) no-repeat left top  	 }
+ul#tabmenu li a.fs 		{ float:left; width:164px; height:141px; background:url(../images/finserv.jpg) no-repeat left top  	}
+ul#tabmenu li a.ls 		{ float:left; width:164px; height:141px; background:url(../images/life-sci.jpg) no-repeat left top  	}
+ul#tabmenu li a.ener 	{ float:left; width:164px; height:141px; background:url(../images/energy.jpg) no-repeat left top  	 	}
+ul#tabmenu li a.cs 		{ float:left; width:164px; height:141px; background:url(../images/cons-sec.jpg) no-repeat left top  	}
+ul#tabmenu li a.np 		{ float:left; width:164px; height:141px; background:url(../images/non-prof.jpg) no-repeat left top  	}
+ul#tabmenu li a.auto 	{ float:left; width:164px; height:141px; background:url(../images/auto.jpg) no-repeat left top  		}
+ul#tabmenu li a.cm 		{ float:left; width:164px; height:141px; background:url(../images/com-med.jpg) no-repeat left top  	}
+ul#tabmenu li a.compmfg { float:left; width:164px; height:141px; background:url(../images/compmfg.jpg) no-repeat left top  	}
+ul#tabmenu li a.ht 		{ float:left; width:164px; height:141px; background:url(../images/hitech.jpg) no-repeat left top  		}
+ul#tabmenu li a.ps 		{ float:left; width:164px; height:141px; background:url(../images/pubsec.jpg) no-repeat left top  		}
+ul#tabmenu li a.tt 		{ float:left; width:164px; height:141px; background:url(../images/travtrans.jpg) no-repeat left top  	}
+ul#tabmenu li a.oi 		{ float:left; width:164px; height:141px; background:url(../images/other.jpg) no-repeat left top  	}
+
+ul#tabmenu li a.ih:hover, ul#tabmenu li a.fs:hover, /*ul#tabmenu li a.ls:hover,ul#tabmenu li a.ener:hover,ul#tabmenu li a.cs:hover,ul#tabmenu li a.np:hover,ul#tabmenu li a.auto:hover,ul#tabmenu li a.cm:hover,ul#tabmenu li a.compmfg:hover,ul#tabmenu li a.ht:hover,ul#tabmenu li a.ps:hover,ul#tabmenu li a.tt:hover,*/ #KPIset a.wa:hover, #KPIset a#waCurrent, ul#tabmenu li a.current, #KPIset a.brnhperf:hover, #KPIset a.dlm:hover, #KPIset a.corpfin:hover,  #KPIset a.HRA:hover,  #KPIset a.frdmgmt:hover,  #myanalyticlibrary a.bp:hover,  #myanalyticlibrary a.deploan:hover,  #myanalyticlibrary a.fraudmgmt:hover,  #myanalyticlibrary a.corpfin:hover,  #myanalyticlibrary a.HRA:hover,  #myanalyticlibrary a.webanalytic:hover, #myanalyticlibrary a#current	{ background-position:left bottom	} 
+
+#KPIset 					{ color:#232323}
+
+ul#tabmenu li .submenu { visibility: hidden;  position: absolute;  z-index: 999; left:167px; top:3px; width:660px; zoom:1; xborder:1px solid #fff 	}
+ul#tabmenu li .submenu .links { float:left; width:154px; border:1px solid #013677; border-width:0 2px; background:url(../images/midgrad.gif) repeat-x left center; padding:5px 0;  }
+ul#tabmenu li .submenu .links a.sm { width:133px; padding:6px 0 6px 20px;   display: block;  text-align: left; text-indent:0;  text-decoration: none; color: #6b9743; clear:both; background:url(../images/greenarrow.gif) no-repeat 10px 9px; font-weight:bold;  position: relative;  z-index: 1000;	 }
+ul#tabmenu li .submenu a.sm:hover, ul#tabmenu li .submenu a#current { color: #000; background-color:#ddd  }
+
+
+
+#myanalyticlibrary {}
+#myanalyticlibrary a.mal 		{ float:left; width:324px; height:254px; text-indent:-9999em; display:block; position:relative }
+
+#myanalyticlibrary a.bp  		{ background:url(../images/MAL-brnchperf.png) no-repeat left top }
+#myanalyticlibrary a.deploan  	{ background:url(../images/MAL-dep-loan.png) no-repeat left top }
+#myanalyticlibrary a.fraudmgmt  { background:url(../images/MAL-fraudmgmt.png) no-repeat left top }
+#myanalyticlibrary a.corpfin  	{ background:url(../images/MAL-corpfin.png) no-repeat left top }
+#myanalyticlibrary a.HRA  		{ background:url(../images/MAL-hra.png) no-repeat left top }
+#myanalyticlibrary a.webanalytic{ background:url(../images/MAL-wa.png) no-repeat left top }
+
+ 
+/* */
+
+.create-account { position:absolute; top:25%; left:19%; z-index:99999999; width:623px;  border:5px solid #fff; background:#e2f2fe; color:#222;			}
+.create-account .closepop { position:absolute; top:3px; right:3px; z-index:100	}
+#signupform { padding:29px 0 0 29px;}
+#signupform ul li { margin:0 0 18px 0}
+#signupform ul li label	{ float:left; width:100px; line-height:25px; }
+#signupform ul li.iagree, #signupform ul li.remember, #signupform ul li.continue { padding:0 0 0 100px;	}
+#signupform ul li.continue input.continue { width:74px; height:28px; background:url(../images/continue.gif) no-repeat; border:none; cursor:pointer; xtext-indent:-9999em }
+#signupform ul li span { font-size:11px; line-height:17px; }
+#signupform ul li.iagree, #signupform ul li.remember { margin-bottom:10px; }
+
+
+
+
+.sortby { background:url(../images/sortby.gif) no-repeat left top }
+#KPIset .application, 
+.pricing a.type 		{ display:block; width:324px; height:192px; text-indent:-9999em; 	}
+#KPIset a.wa 			{ background:url(../images/KPI-webanalytic.png) no-repeat left top  	}
+#KPIset a.brnhperf 		{ background:url(../images/KPI-branchperformance.png) no-repeat left top}
+#KPIset a.dlm 			{ background:url(../images/KPI-deploan.png) no-repeat left top		}
+#KPIset a.corpfin 		{ background:url(../images/KPI-corpfin.png) no-repeat left top			}
+#KPIset a.HRA 			{ background:url(../images/KPI-HRA.png) no-repeat left top				}
+#KPIset a.frdmgmt 		{ background:url(../images/KPI-fraudmgmt.png) no-repeat left top		}
+
+/* */
+.data-table { background:#fff; border-bottom:2px solid #fff}
+.data-table h5 { color:#09448c; font-weight:normal }
+
+.bdrbtm	{  background:url(../images/bdrbtmline.gif) repeat-x left bottom; padding:0; margin:0	}
+
+.file-process-status { background:#cee8ff; font-size:15px; margin:12px 0 0 0  }
+.file-process-status td { padding:10px 25px}
+
+/* pricing */ 
+.pricing { margin:10px 0 0 0  }
+.pricing  a.type  { position:relative; width:252px; height:229px; text-indent:0  }
+.pricing  a.free span  { position:absolute; top:100px; left:0 ; font-size:15px; color:#474747;  width:170px; margin:0 0 0 39px; line-height:20px	 }
+.pricing a.business span,
+.pricing a.business-current span { position:absolute; top:99px; left:0 ; font-size:15px; color:#474747;  width:216px; margin:0 0 0 18px; line-height:20px	 }
+.pricing  a.custom span{ position:absolute; top:100px; left:0 ; font-size:15px; color:#474747;  width:160px; margin:0 0 0 45px; line-height:20px	 }
+.pricing  a.type:hover { text-decoration:none}
+
+.pricing td span { font-size:11px; line-height:25px; color:#747474	}
+.pricing a.custom  		{ background:url(../images/pricing-custom.gif) no-repeat left top 	}
+/*.pricing a.custom:hover  	{ background:url(../images/pricing-biz.gif) no-repeat left top 	}*/
+.pricing a.business  		{ background:url(../images/pricing-biz-normal.gif) no-repeat left top 	}
+
+.pricing a.business:hover,
+.pricing a.business-current
+{ background:url(../images/pricing-biz.gif) no-repeat left top 	}
+
+.pricing a.free  		{ background:url(../images/pricing-free.gif) no-repeat left top 	}
+/*.pricing a.free:hover  	{ background:url(../images/pricing-biz.gif) no-repeat left top 	}*/
+
+.username { color:#012a92 }
+
+/* faq */
+
+.FAQ { background:#cce8fd url(../images/midlineblue.gif) repeat-y left top; color:#2d2d2d; font-size:11px;  }
+.FAQ strong { font-size:13px; }
+.FAQ p { margin:8px 12px }
+.FAQ a { text-decoration:underline}
+
+
+/* Corporate KPI’s */
+
+.tahoma13 { font-size:13px; color:#0A4288;}
+.title { background:url(../images/left-nav-title-bg.gif) no-repeat; width:185px; height:33px; padding-left:12px; font-size:13px; color:#FFFFFF; font-weight:bold;}
+.continent { width:174px; height:72px; overflow-y:scroll; overflow-x:hidden; color:000000; padding:10px 11px 10px 11px; border:1px solid #000000; line-height:16px; text-align:left;}
+
+/* temporary */
+.profit { position:absolute; top:87px; left:0px; z-index:99999999; width:736px;	}
+
+/* temporary */
