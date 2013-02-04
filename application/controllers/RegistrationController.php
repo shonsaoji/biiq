@@ -96,18 +96,18 @@ class RegistrationController extends Zend_Controller_Action
         {
             $mail = new PHPMailer();
             $mail->IsSMTP();// отсылать использу€ SMTP
-            $mail->Host     = "mail.tychio.com"; // SMTP сервер
+            $mail->Host     = "mail.cerebrateinc.com"; // SMTP сервер
             $mail->Port = 25;
 
             $mail->SMTPAuth = true;     // включить SMTP аутентификацию
-            $mail->Username = "biiq@tychio.com";  // SMTP username
+            $mail->Username = "biiq@cerebrateinc.com";  // SMTP username
             $mail->Password = "5RL3oiYh"; // SMTP password
 
-            $mail->From     = "biiq@tychio.com"; // укажите от кого письмо
-            $mail->FromName = "Tychio BIIQ";
+            $mail->From     = "biiq@cerebrateinc.com"; // укажите от кого письмо
+            $mail->FromName = "cerebrateinc BIIQ";
             $mail->AddAddress($strEmail,$strName); // е-мэил кому отправл€ть ///"Name"
-            $mail->AddBCC("biiq@tychio.com","BIIQ"); 
-			$mail->AddReplyTo("biiq@tychio.com","Tychio BIIQ"); // е-мэил того кому прейдет ответ на ваше письмо
+            $mail->AddBCC("biiq@cerebrateinc.com","BIIQ"); 
+			$mail->AddReplyTo("biiq@cerebrateinc.com","cerebrateinc BIIQ"); // е-мэил того кому прейдет ответ на ваше письмо
             $mail->WordWrap = 50;// set word wrap
             $mail->IsHTML(true);// отправить в html формате
 
@@ -116,10 +116,10 @@ class RegistrationController extends Zend_Controller_Action
 
 			
             $mail->Body  =  "<p>Dear ".$strFname." ".$strLname.",</P><p>Thank you for taking the Business Intelligence IQ Survey. Your current BIIQ score is ".$score.".<br/><br/>
-            <p>Your feedback is very important to us and acts as a benchmark for your industry. The BIIQ score helps you identify opportunities for further improvement in decision making through innovative visualization and analysis of dashboards and score cards. Tychio has developed this survey so that you could continually monitor 
+            <p>Your feedback is very important to us and acts as a benchmark for your industry. The BIIQ score helps you identify opportunities for further improvement in decision making through innovative visualization and analysis of dashboards and score cards. cerebrateinc has developed this survey so that you could continually monitor 
     		the decision making process most pragmatically and effectively.<br/><br/>
-    		To find out more about how to improve your score, read your report <a href='http://www.tychio.com/howtoimprove.phtml?id=".($score*856)."&id2=".($personId*712)."&ref=email"."' >here.</a> <br/><br/></p>
-    		<p><br/><br/>Regards,<br/><br/>Tychio Marketing<BR><BR><a href='http://www.tychio.com'>tychio.com<a></p>"; 
+    		To find out more about how to improve your score, read your report <a href='http://www.cerebrateinc.com/howtoimprove.phtml?id=".($score*856)."&id2=".($personId*712)."&ref=email"."' >here.</a> <br/><br/></p>
+    		<p><br/><br/>Regards,<br/><br/>cerebrateinc Marketing<BR><BR><a href='http://www.cerebrateinc.com'>cerebrateinc.com<a></p>"; 
             // тело письма текстовое
             if(!$mail->Send())
             {

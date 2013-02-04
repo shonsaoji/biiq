@@ -65,7 +65,7 @@ class GroupController extends Zend_Controller_Action
             (
                 "company_name" => "",
                 "contact" => "",
-                "email" => "donotreply@tychio.com",
+                "email" => "donotreply@cerebrateinc.com",
                 "first_name" => "New User ".$_SERVER['REMOTE_HOST'],
                 "last_name" => $_SERVER['REQUEST_TIME'],
                 "group_id" => null,

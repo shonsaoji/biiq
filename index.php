@@ -24,13 +24,19 @@ $db = new Zend_Db_Adapter_Pdo_Mysql(array(
     'dbname'   => 'sethkutt_testing'
 ));
 */
-
 $db = new Zend_Db_Adapter_Pdo_Mysql(array(
-		'host'     => 'db453890854.db.1and1.com',
-		'username' => 'dbo453890854',
-		'password' => 'testing',
-		'dbname'   => 'db453890854'
+		'host'     => '127.0.0.1',
+		'username' => 'root',
+		'password' => 'sk4scrappers',
+		'dbname'   => 'testing'
 ));
+
+// $db = new Zend_Db_Adapter_Pdo_Mysql(array(
+// 		'host'     => 'db453890854.db.1and1.com',
+// 		'username' => 'dbo453890854',
+// 		'password' => 'testing',
+// 		'dbname'   => 'db453890854'
+// ));
 
 Zend_Db_Table::setDefaultAdapter($db);
 
