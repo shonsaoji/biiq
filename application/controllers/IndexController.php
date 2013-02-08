@@ -10,7 +10,7 @@ class IndexController extends Zend_Controller_Action
     }
     function indexAction()
     {
-        $this->view->title = "Tychio BIIQ - Business Intelligence IQ";
+        $this->view->title = "Cerebrate BIIQ - Business Intelligence IQ";
         $this->view->right_block = "";
         $this->view->stepbystep = "";
         $this->view->litle_logo = "";
